@@ -1,56 +1,63 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<deque>
 #define ll long long
 using namespace std;
 
 void solve(){
-		ll n, l, r, e, o, c;
-		vector<ll> ans;
+		ll n, l, r, e, o;
 		string s;
 		cin >> n >> s;
 		l = 0;
-		r = n - 1;
+		r = n;
 		e = 0;
 		o = 0;
-		c = 0;
+		deque<char> q;
+		vector<ll> ans;
 
 		for(int i = 0; i < n; i++){
 				if(s[i] == '0') e++;
 				else o++;
+				q.push_back(s[i]);
 		}
 		if(e != o){
 				cout << -1 << '\n';
 				return;
 		}
 		
-		
-		while(l < r){
-				// 00110110
-				if(s[l] == '0' && s[r] == '0'){
-						s.insert(r + 1, "01");
-						ans.push_back(r + 1);
-						c++;
-						r++;
-						l++;
+
+		// 110001
+		// 01 110001
+		// 1 11000
+		//  1100
+		while(!q.empty()){
+				if(q.front() == '0' && q.back() == '0'){
+						q.push_back('0');
+						q.push_back('1');
+						ans.push_back(r);
+						r += 2;
+
 				}
-				else if(s[l] == '1' && s[r] == '1'){
-						s.insert(l, "01");
+				else if(q.front() == '1' && q.back() == '1'){
+						q.push_front('1');
+						q.push_front('0');
 						ans.push_back(l);
-						c++;
-						l--;
-						r--;
+						r += 2;
 				}
 				else{
-						r--;
+						q.pop_front();
+						q.pop_back();
 						l++;
+						r--;
 				}
-				
 		}
 				
-		cout << c << '\n';
+				
+		cout << ans.size() << '\n';
 		for(int i = 0; i < ans.size(); i++){
 				cout << ans[i] << ' ';
+				if(i == ans.size() - 1) cout << '\n';
 		}
 }
 
