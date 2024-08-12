@@ -1,0 +1,9 @@
+1982B: I hate this guy.
+update: killed him finally. solution was doomed cus for loop doesnt reinitilaize the indexing variable so i was constant the whole loop. 
+
+1979B: xor bit voodoo. I hate this guy.
+
+1981A: no fucking way this shits rated 800
+
+1977B: finish tomororw;
+
