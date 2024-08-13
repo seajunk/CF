@@ -16,7 +16,7 @@ void generateLucky(vector<ll>&v, string lucky){
 }
 
 int main(){
-		ll n;
+    ll n;
 		cin >> n;
 		vector<ll> v;
 		generateLucky(v, "");
@@ -25,9 +25,4 @@ int main(){
 				if(n % v[i] == 0){cout << "YES" << '\n'; return 0;}
 		}
 		cout << "NO" << '\n';
-
-
-
-
-		
 }

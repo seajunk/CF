@@ -3,7 +3,7 @@
 #define ll long long
 using namespace std;
 
-// notice that either 2 D's arer lost, 2 D's are gained, or the number of D's remains the same.
+// notice that either 2 D's are lost, 2 D's are gained, or the number of D's remains the same.
 // DUD -> U U
 // UUU -> D D
 // DUU -> U D
