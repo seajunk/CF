@@ -6,4 +6,13 @@ update: killed him finally. solution was doomed cus for loop doesnt reinitilaize
 1981A: no fucking way this shits rated 800
 
 1977B: finish tomororw;
+update: done
 
+1982C: i swear this ones so easy. come back tomorrow
+update: nvm killed it today. The takeaway being, ALWAYS USE HALF INTERVALS [L, R) ALWAYS!!!!
+
+1997C: my fucking arch nemesis
+
+1957C: soon tm
+
+1946B: cringe 1e9+7 mod thing. fix later
